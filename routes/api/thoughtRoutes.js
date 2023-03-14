@@ -20,4 +20,4 @@ router.route('/:id').get(getAThought).put(updateThought).delete(deleteThought)
 router.route('/:thoughtId/reactions/:reactionId').delete(deleteReaction)
 router.route('/:thoughtId/reactions').post(addReaction)
 
-module.exports =router
+module.exports = router
