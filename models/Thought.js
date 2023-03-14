@@ -1,5 +1,5 @@
 const {Schema, model, Types} = require('mongoose')
-const dateForm = require('../utils/dateForm.js')
+// const dateForm = require('../utils/dateForm.js')
 
 const thoughtSchema = new Schema(
     {
