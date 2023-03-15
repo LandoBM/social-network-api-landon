@@ -2,7 +2,7 @@ const connection = require('../config/connection');
 const { Thought, User } = require('../models');
 const { getRandomThoughts, getRandomUser, getRandomReac, createEmail } = require('./data')
 
-connection.model('error', (err) => err)
+connection.on('error', (err) => err)
 
 connection.once('open', async () => {
     console.log('connection secured')
