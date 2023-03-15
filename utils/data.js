@@ -22,7 +22,7 @@ const reactions = [
 ]
 
 // Get a random item given an array
-const getRandomArray = (arr) = arr[Math.floor(Math.random() * arr.length)]
+const getRandomArray = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
 // Get Random User
 const getRandomUser = () => `${getRandomArray(users)}`

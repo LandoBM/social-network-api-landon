@@ -15,23 +15,28 @@ connection.once('open', async () => {
 
     // Create empty array to hold the users and thoughts
     const users = []
-    const thought = []
+    const thoughts = []
 
     // Loop 3 times -- add Users to user array
     for(let i = 0; i < 3; i++) {
         const username = getRandomUser()
         const email = createEmail()
-        username.push({
+        users.push({
             username,
             email
         })
+        thoughts.push({
+            username: getRandomReac(),
+            post: getRandomThoughts()
+        })
+
     }
     
     // Add user to the collection and await results
     await User.collection.insertMany(users)
 
     // Add courses to the collection and await the results
-    await Thought.collection.insertMany(thought)
+    await Thought.collection.insertMany(thoughts)
 
     // Log out the seed data to indicate what should show in the database
     console.table(users)
