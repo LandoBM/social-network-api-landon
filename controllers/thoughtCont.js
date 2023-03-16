@@ -20,12 +20,26 @@ module.exports = {
     // Create a thought
     createThought(req,res) {
         Thought.create(req.body)
-        .then((thought) => res.json(thought))
+        .then((thought) => {
+            if(!thought){
+                return res.status(404).json({message: 'No Thought with this ID'})
+            }
+            return User.findOneAndUpdate(
+                {_id: req.body.userId},
+                {$push: {thoughts: thought._id}}
+            )
+        })
+        .then((userInfo) => {
+            if(!userInfo){
+                return res.status(404).json({message: 'No Thought with this User Information is found! :('})
+            }
+            return res.status(500).json({message: 'Successfully Created Thought! :)'})
+        })
         .catch((err) => {
             console.log(err)
             return res.status(500).json(err)
         })
-    },
+    },    
     // Delete A thought
     deleteThought(req, res) {
         Thought.findOneAndDelete({ _id: req.params.thoughtId})

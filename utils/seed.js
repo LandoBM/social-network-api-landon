@@ -26,7 +26,7 @@ connection.once('open', async () => {
             email
         })
         thoughts.push({
-            username: getRandomReac(),
+            username: getRandomUser(),
             post: getRandomThoughts()
         })
 
@@ -40,7 +40,7 @@ connection.once('open', async () => {
 
     // Log out the seed data to indicate what should show in the database
     console.table(users)
-    console.info('Done Seeding!')
+    console.info('Done Seeding! 🌱')
     process.exit(0)
 
 

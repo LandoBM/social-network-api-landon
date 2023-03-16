@@ -3,14 +3,23 @@ const thoughts = [
     'in order to sleep we first pretend to sleep',
     'cannot wait until the cabin trip',
     'party party party',
-    'Beyonce is going on tour.. yesss'
+    'Beyonce is going on tour.. yesss',
+    'Going out this weekend should be fun',
+    'Getting a new puppy!',
+    'Learning React soon should make my forehead hurt',
+    'GA Tech is elite'
 ]
 
 const users = [
     'boobear123',
     'ravenswing556',
     'gymguyzion',
-    'nikkid'
+    'nikkid',
+    'jamesdurden',
+    'kimkardashian1',
+    'mikeljj',
+    'noahcyrus',
+    'beyhive223'
 ]
 
 const reactions = [
@@ -18,7 +27,11 @@ const reactions = [
     'in order to wake up we first dream that we a re awake',
     'which cabin in the woods will you be visiting?',
     'where the party at?',
-    'Uncle Johnny made that dress, that cheap spandex she looks a mess'
+    'Uncle Johnny made that dress, that cheap spandex she looks a mess',
+    'Can not wait to catch up with you',
+    'I heard golden doodles are the cutest, but a doberman is it!',
+    'learning any new programming language will always make your forehead hurt first',
+    'Elite is the new way of thinking'
 ]
 
 // Get a random item given an array
@@ -34,6 +47,6 @@ const getRandomThoughts = () => `${getRandomArray(thoughts)}`
 const getRandomReac = () => `${getRandomArray(reactions)}`
 
 // Create User Email
-const createEmail = () => `${getRandomArray(users)}`+ 'icloud.com'
+const createEmail = () => `${getRandomArray(users)}`+ '@icloud.com'
 
 module.exports = {getRandomThoughts, getRandomReac, getRandomUser, createEmail}

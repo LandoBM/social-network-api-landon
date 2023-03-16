@@ -20,6 +20,8 @@ module.exports = {
     // Get User by ID
     getUserById(req, res){
         User.findOne({ _id: req.params.id})
+        .lean()
+        .select('-__v')
         .then((user) => 
             !user
                 ?res.status(404).json({message: 'No User found with ID'})
