@@ -18,16 +18,17 @@ connection.once('open', async () => {
     const thoughts = []
 
     // Loop 3 times -- add Users to user array
-    for(let i = 0; i < 3; i++) {
+    for(let i = 0; i < 5; i++) {
         const username = getRandomUser()
         const email = createEmail()
+        
         users.push({
             username,
             email
         })
         thoughts.push({
             username: getRandomUser(),
-            post: getRandomThoughts()
+            thoughtText: getRandomThoughts()
         })
 
     }

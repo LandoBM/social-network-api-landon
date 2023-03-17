@@ -11,8 +11,8 @@ const validateEmail = function(email) {
 const userSchema = new Schema(
     {
     username: {type: String, 
+        unique: true,
         required: true, 
-        unique: true, 
         trim: true
     }},
     {
@@ -34,10 +34,8 @@ const userSchema = new Schema(
     }]},
     {
         toJSON: {
-            virtuals: true,
             getters: true 
         },
-        id: false
     }
 )
 

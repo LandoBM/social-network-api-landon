@@ -10,7 +10,7 @@ module.exports = {
     },
     // Get A single thought
     getAThought(req, res) {
-        Thought.find({ _id: req.params.thoughtId})
+        Thought.findOne({ _id: req.params.thoughtId})
         .select('-__v')
         .then((thought) =>
         !thought

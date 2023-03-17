@@ -3,7 +3,7 @@ const reactionSchema = require("./Reaction");
 
 const thoughtSchema = new Schema(
   {
-    thoughText: {
+    thoughtText: {
       type: String,
       require: true,
       min: 1,
