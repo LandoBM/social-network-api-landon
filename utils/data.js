@@ -19,7 +19,12 @@ const users = [
     'kimkardashian1',
     'mikeljj',
     'noahcyrus',
-    'beyhive223'
+    'beyhive223',
+    'stanleylew',
+    'ericaB',
+    'samJJ',
+    'quez456',
+    'stormyBBY'
 ]
 
 const reactions = [
@@ -45,6 +50,7 @@ const getRandomThoughts = () => `${getRandomArray(thoughts)}`
 
 // Get Random Reactions
 const getRandomReac = () => `${getRandomArray(reactions)}`
+console.log(getRandomArray(reactions))
 
 // Create User Email
 const createEmail = () => `${getRandomArray(users)}`+ '@icloud.com'

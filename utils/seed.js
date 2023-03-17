@@ -8,39 +8,42 @@ connection.once('open', async () => {
     console.log('connection secured')
 
     // Drop existing thoughts
-    await Thought.deleteMany()
+    await Thought.deleteMany({})
 
     // Drop Users
-    await User.deleteMany()
+    await User.deleteMany({})
 
     // Create empty array to hold the users and thoughts
-    const users = []
-    const thoughts = []
-
-    // Loop 3 times -- add Users to user array
+    const user = []
+    const thought = []
+    const reaction = []
+    // Loop 5 times -- add Users to user array
     for(let i = 0; i < 5; i++) {
         const username = getRandomUser()
         const email = createEmail()
+        // const reactions = getRandomReac()
         
-        users.push({
+        user.push({
             username,
             email
         })
-        thoughts.push({
+        thought.push({
             username: getRandomUser(),
-            thoughtText: getRandomThoughts()
+            thoughtText: getRandomThoughts(),
+            reaction: getRandomReac()
         })
 
     }
     
     // Add user to the collection and await results
-    await User.collection.insertMany(users)
+    await User.collection.insertMany(user)
 
     // Add courses to the collection and await the results
-    await Thought.collection.insertMany(thoughts)
+    await Thought.collection.insertMany(thought)
+    await Thought.collection.insertMany(reaction)
 
     // Log out the seed data to indicate what should show in the database
-    console.table(users)
+    console.table(user)
     console.info('Done Seeding! 🌱')
     process.exit(0)
 
