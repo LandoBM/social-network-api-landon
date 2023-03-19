@@ -1,5 +1,6 @@
-const { Thought, User} = require('../models')
 const { ObjectId } = require('mongoose').Types
+const { Thought, User} = require('../models')
+// const { ObjectId } = require('mongoose').Types
 
 module.exports = {
     // Get Al  Users
@@ -13,7 +14,7 @@ module.exports = {
         User.create(req.body)
         .then((users) => res.json(users))
         .catch((err) => {
-            console.log(err)
+            // console.log(err)
             return res.status(500).json(err)
         })
     },

@@ -1,5 +1,6 @@
-const {Thought, User} = require('../models')
 const {ObjectId} =require('mongoose').Types
+const {Thought, User} = require('../models')
+// const {ObjectId} =require('mongoose').Types
 
 module.exports = {
     // Get All thoughts
@@ -30,8 +31,8 @@ module.exports = {
                 {new:true}
             )
         })
-        .then((userInfo) => {
-            if(!userInfo){
+        .then((userData) => {
+            if(!userData){
                 return res.status(404).json({message: 'No Thought with this User Information is found! :('})
             }
             return res.status(500).json({message: 'Successfully Created Thought! :)'})

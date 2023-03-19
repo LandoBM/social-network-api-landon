@@ -21,14 +21,14 @@ connection.once('open', async () => {
     for(let i = 0; i < 5; i++) {
         const username = getRandomUser()
         const email = createEmail()
-        // const reactions = getRandomReac()
         
         user.push({
             username,
             email
         })
         thought.push({
-            username: getRandomUser(),
+            username,
+            email,
             thoughtText: getRandomThoughts(),
             reaction: getRandomReac()
         })
@@ -44,6 +44,7 @@ connection.once('open', async () => {
 
     // Log out the seed data to indicate what should show in the database
     console.table(user)
+    console.table(thought)
     console.info('Done Seeding! 🌱')
     process.exit(0)
 
