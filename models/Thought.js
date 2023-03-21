@@ -9,22 +9,16 @@ const thoughtSchema = new Schema(
       minLength: 1,
       maxLength: 280,
     },
-  },
-  {
     createdAt: {
       type: Date,
       default: Date.now,
       get: (createdAtVal) => dateForm(createdAtVal),
     },
-  },
-  {
     username: {
       type: String,
       require: true,
       unique: true,
     },
-  },
-  {
     reactions: [reactionSchema],
   },
   {

@@ -24,7 +24,10 @@ const users = [
     'ericaB',
     'samJJ',
     'quez456',
-    'stormyBBY'
+    'stormyBBY',
+    'kyleking',
+    'oprahw',
+    'gracekelly'
 ]
 
 const reactions = [
