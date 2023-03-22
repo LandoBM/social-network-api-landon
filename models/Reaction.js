@@ -17,7 +17,7 @@ const reactionSchema = new Schema(
         createdAt: {
           type: Date,
           default: Date.now,
-          get: (createdAtVal) => dateForm(createdAtVal),
+          get: (createdAtVal) => (createdAtVal),
         },
         username: {
           type: String,
