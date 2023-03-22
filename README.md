@@ -57,13 +57,16 @@
   * E-Mail :landon.swdeveloper@gmail.com
 
   ## Mock
-  ![Image]()
+  ![Image](./Assets/sna-gif.gif)
+  ![Image](./Assets/sna-gif(2).gif)
+  ![Image](./Assets/sna-gif(3).gif)
+
 
   ## License
     Licensed using MIT License.
   
   ## Walkthrough
-  [Social API]()
+  [Social API](https://drive.google.com/file/d/1tfz0eDo_lWaseZILM8VF_whFxjKXSMlT/view)
 
 ---
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
